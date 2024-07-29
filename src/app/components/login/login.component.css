@@ -1,0 +1,36 @@
+/* src/app/components/login/login.component.css */
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+  /* src/app/components/login/login.component.css */
+
+/* Ensure that the card has a slight shadow for a modern look */
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add some padding and rounded corners */
+  .card-body {
+    padding: 2rem;
+  }
+  
+  /* Center the card title */
+  .card-title {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Ensure the form controls have enough spacing */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  /* Add a bit of space at the bottom of the button */
+  .btn {
+    margin-top: 1rem;
+  }
+  
+  
