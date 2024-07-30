@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './auth/auth.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PersonComponent } from './components/person/person.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PersonComponent } from './components/person/person.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    HttpClientModule
+    AppRoutingModule 
   ],
   providers: [
     AuthService,

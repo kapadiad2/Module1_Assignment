@@ -1,10 +1,36 @@
-<div>
-  <h2>Users List</h2>
-  <ul>
-    <li *ngFor="let user of users">
-      {{ user.username }} ({{ user.role }})
-    </li>
-  </ul>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Person List</h2>
+      <div class="table-responsive">
+        <table class="table table-striped custom-table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">City</th>
+              <th scope="col">Province</th>
+              <th scope="col">Phone</th>
+              <th scope="col"  *ngIf="isAdmin">Update</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let person of persons">
+              <td>{{ person.id }}</td>
+              <td>{{ person.firstName }} {{ person.lastName }}</td>
+              <td>{{ person.address }}</td>
+              <td>{{ person.city }}</td>
+              <td>{{ person.province }}</td>
+              <td>{{ person.phone }}</td>
+              <button *ngIf="isAdmin">Update</button>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   
-  <button *ngIf="isAdmin">Update</button>
-</div>
+
+  </div>
+
+

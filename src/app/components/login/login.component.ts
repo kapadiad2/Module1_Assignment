@@ -13,14 +13,15 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  login() {
-   
-    // this.authService.login(this.username, this.password).subscribe(success => {
-      if (this.authService.login(this.username, this.password)) {
-        this.router.navigate(['/person']);
-      } else {
-        alert('Invalid credentials');
-      }
-    };
-  }
-
+ login() {
+  console.log('Logging in with:', this.username, this.password);
+  this.authService.login(this.username, this.password).subscribe(success => {
+    console.log('Login response:', success);
+    if (success) {
+      this.router.navigate(['/person']);
+    } else {
+      alert('Invalid credentials');
+    }
+  });
+}
+}

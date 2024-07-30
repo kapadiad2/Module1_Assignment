@@ -12,10 +12,9 @@ export class AuthService {
   constructor() {}
 
   login(username: string, password: string): Observable<boolean> {
-    // Simulate fetching user from backend
-    if ((username === 'adminUser' && password === 'adminpassword') ||
-        (username === 'memberUser' && password === 'memberpassword')) {
-      this.currentUser = { username, role: username === 'adminUser' ? 'admin' : 'member' };
+    if ((username === 'Devanshi' && password === 'Devanshi') ||
+        (username === 'Kesha' && password === 'Kesha')) {
+      this.currentUser = { username, role: username === 'Devanshi' ? 'admin' : 'member' };
       localStorage.setItem('token', 'dummy-token');
       return of(true);
     }
@@ -27,6 +26,8 @@ export class AuthService {
   }
 
   isInRole(role: string): boolean {
+    alert(this.currentUser);
+    alert(this.currentUser.role);
     return this.currentUser && this.currentUser.role === role;
   }
 
